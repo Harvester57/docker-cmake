@@ -1,16 +1,21 @@
 # Source: https://hub.docker.com/_/gcc/
-FROM gcc:11.2.0
+FROM ubuntu:22.04
 
 LABEL maintainer "florian.stosse@safrangroup.com"
-LABEL lastupdate "23-11-2021"
+LABEL lastupdate "05-12-2021"
 LABEL author "Florian Stosse"
-LABEL description "CMake 3.22.0 using GCC 11.2 base image"
+LABEL description "CMake 3.22.0 using Ubuntu 22.04 base image"
 LABEL license "MIT license"
 
 # Cf. https://github.com/Kitware/CMake/releases
 ARG CMAKE_VERSION=3.22.0
 
-RUN wget --no-check-certificate https://github.com/Kitware/CMake/releases/download/v${CMAKE_VERSION}/cmake-${CMAKE_VERSION}-linux-x86_64.sh \
+RUN \
+  apt-get update && \
+  apt-get install -y --no-install-recommends gcc make ca-certificates && \
+  update-ca-certificates
+
+RUN wget https://github.com/Kitware/CMake/releases/download/v${CMAKE_VERSION}/cmake-${CMAKE_VERSION}-linux-x86_64.sh \
   -q -O /tmp/cmake-install.sh && \
   chmod u+x /tmp/cmake-install.sh && \
   mkdir /usr/bin/cmake && \
