@@ -12,7 +12,7 @@ ARG CMAKE_VERSION=3.22.0
 
 RUN \
   apt-get update && \
-  apt-get install -y --no-install-recommends gcc make ca-certificates wget && \
+  apt-get install -y --no-install-recommends build-essential make ca-certificates wget && \
   update-ca-certificates
 
 RUN wget https://github.com/Kitware/CMake/releases/download/v${CMAKE_VERSION}/cmake-${CMAKE_VERSION}-linux-x86_64.sh \
