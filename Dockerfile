@@ -1,5 +1,5 @@
 # Source: https://hub.docker.com/_/ubuntu
-FROM ubuntu:jammy-20211122
+FROM ubuntu:jammy-20220101
 
 LABEL maintainer "florian.stosse@safrangroup.com"
 LABEL lastupdate "05-12-2021"
