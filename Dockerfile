@@ -2,13 +2,13 @@
 FROM ubuntu:jammy-20220101
 
 LABEL maintainer "florian.stosse@safrangroup.com"
-LABEL lastupdate "05-12-2021"
+LABEL lastupdate "2022-01-20"
 LABEL author "Florian Stosse"
-LABEL description "CMake 3.22.0 using Ubuntu 22.04 base image"
+LABEL description "CMake 3.22.1 using Ubuntu 22.04 base image"
 LABEL license "MIT license"
 
 # Cf. https://github.com/Kitware/CMake/releases
-ARG CMAKE_VERSION=3.22.0
+ARG CMAKE_VERSION=3.22.1
 
 RUN \
   apt-get update && \
