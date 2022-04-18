@@ -26,7 +26,8 @@ RUN groupadd -g 999 appuser && \
     mkdir -p /home/appuser && \
     useradd -r -d /home/appuser -u 999 -g appuser appuser && \
     chown -R appuser:appuser /home/appuser && \
-    usermod -aG sudo appuser
+    usermod -aG sudo appuser && \
+    echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 USER appuser
 
 ENV PATH="/usr/bin/cmake/bin:${PATH}"
