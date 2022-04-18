@@ -2,13 +2,13 @@
 FROM ubuntu:jammy-20220404
 
 LABEL maintainer "florian.stosse@safrangroup.com"
-LABEL lastupdate "2022-03-24"
+LABEL lastupdate "2022-04-18"
 LABEL author "Florian Stosse"
-LABEL description "CMake 3.22.3 using Ubuntu 22.04 base image"
+LABEL description "CMake 3.23.1 using Ubuntu 22.04 base image"
 LABEL license "MIT license"
 
 # Cf. https://github.com/Kitware/CMake/releases
-ARG CMAKE_VERSION=3.22.3
+ARG CMAKE_VERSION=3.23.1
 
 RUN \
   apt-get update && \
@@ -21,5 +21,11 @@ RUN wget https://github.com/Kitware/CMake/releases/download/v${CMAKE_VERSION}/cm
   mkdir /usr/bin/cmake && \
   /tmp/cmake-install.sh --skip-license --prefix=/usr/bin/cmake && \
   rm /tmp/cmake-install.sh
+  
+RUN groupadd -g 999 appuser && \
+    mkdir -p /home/appuser && \
+    useradd -r -d /home/appuser -u 999 -g appuser appuser && \
+    chown -R appuser:appuser /home/appuser
+USER appuser
 
 ENV PATH="/usr/bin/cmake/bin:${PATH}"
