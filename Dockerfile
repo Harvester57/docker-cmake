@@ -8,7 +8,7 @@ LABEL description "CMake 3.23.2 using Ubuntu 22.04 base image"
 LABEL license "MIT license"
 
 # Cf. https://github.com/Kitware/CMake/releases
-ARG CMAKE_VERSION=3.23.2
+ARG CMAKE_VERSION=3.24.1
 
 RUN \
   apt-get update && \
