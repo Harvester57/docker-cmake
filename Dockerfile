@@ -1,14 +1,14 @@
 # Source: https://hub.docker.com/_/ubuntu
-FROM ubuntu:jammy-20230816
+FROM ubuntu:mantic-20230912
 
 LABEL maintainer "florian.stosse@safrangroup.com"
-LABEL lastupdate "2023-01-31"
+LABEL lastupdate "2023-09-23"
 LABEL author "Florian Stosse"
-LABEL description "CMake 3.25.2 using Ubuntu 22.04 base image"
+LABEL description "CMake 3.27.6 using Ubuntu 23.10 base image"
 LABEL license "MIT license"
 
 # Cf. https://github.com/Kitware/CMake/releases
-ARG CMAKE_VERSION=3.26.4
+ARG CMAKE_VERSION=3.27.6
 
 RUN \
   apt-get update && \
