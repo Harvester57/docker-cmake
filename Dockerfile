@@ -2,13 +2,13 @@
 FROM ubuntu:mantic-20230926
 
 LABEL maintainer "florian.stosse@safrangroup.com"
-LABEL lastupdate "2023-09-23"
+LABEL lastupdate "2023-10-09"
 LABEL author "Florian Stosse"
-LABEL description "CMake 3.27.6 using Ubuntu 23.10 base image"
+LABEL description "CMake 3.27.7 using Ubuntu 23.10 base image"
 LABEL license "MIT license"
 
 # Cf. https://github.com/Kitware/CMake/releases
-ARG CMAKE_VERSION=3.27.6
+ARG CMAKE_VERSION=3.27.7
 
 RUN \
   apt-get update && \
