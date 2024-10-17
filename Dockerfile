@@ -2,13 +2,13 @@
 FROM ubuntu:noble-20241011
 
 LABEL maintainer "florian.stosse@gmail.com"
-LABEL lastupdate "2024-09-15"
+LABEL lastupdate "2024-10-17"
 LABEL author "Florian Stosse"
-LABEL description "CMake 3.30.3 using Ubuntu 24.04 base image"
+LABEL description "CMake 3.30.5 using Ubuntu 24.04 base image"
 LABEL license "MIT license"
 
 # Cf. https://github.com/Kitware/CMake/releases
-ARG CMAKE_VERSION=3.30.3
+ARG CMAKE_VERSION=3.30.5
 
 RUN \
   apt-get update && \
