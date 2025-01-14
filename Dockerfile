@@ -1,14 +1,14 @@
 # Source: https://hub.docker.com/_/ubuntu
-FROM ubuntu:noble-20241015
+FROM ubuntu:noble-20241118.1
 
 LABEL maintainer "florian.stosse@gmail.com"
-LABEL lastupdate "2024-11-18"
+LABEL lastupdate "2025-01-14"
 LABEL author "Florian Stosse"
 LABEL description "CMake 3.31.0 using Ubuntu 24.04 base image"
 LABEL license "MIT license"
 
 # Cf. https://github.com/Kitware/CMake/releases
-ARG CMAKE_VERSION=3.31.0
+ARG CMAKE_VERSION=3.31.4
 
 RUN \
   apt-get update && \
