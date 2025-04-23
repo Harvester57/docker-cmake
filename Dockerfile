@@ -2,18 +2,19 @@
 FROM ubuntu:noble-20250404
 
 LABEL maintainer="florian.stosse@gmail.com"
-LABEL lastupdate="2025-04-09"
+LABEL lastupdate="2025-04-14"
 LABEL author="Florian Stosse"
-LABEL description="CMake 4.0.0 using Ubuntu 24.04 base image"
+LABEL description="CMake 4.0.1 using Ubuntu 24.04 base image"
 LABEL license="MIT license"
 
 # Cf. https://github.com/Kitware/CMake/releases
-ARG CMAKE_VERSION=4.0.0
+ARG CMAKE_VERSION=4.0.1
 
 RUN \
   apt-get update && \
   apt-get install -y --no-install-recommends sudo build-essential make ca-certificates wget && \
-  update-ca-certificates
+  update-ca-certificates && \
+  apt-get dist-upgrade -y
 
 RUN wget https://github.com/Kitware/CMake/releases/download/v${CMAKE_VERSION}/cmake-${CMAKE_VERSION}-linux-x86_64.sh \
   -q -O /tmp/cmake-install.sh && \
