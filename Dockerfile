@@ -1,10 +1,10 @@
 # Source: https://hub.docker.com/_/ubuntu
-FROM ubuntu:noble-20250404
+FROM ubuntu:plucky-20250415
 
 LABEL maintainer="florian.stosse@gmail.com"
-LABEL lastupdate="2025-04-14"
+LABEL lastupdate="2025-04-23"
 LABEL author="Florian Stosse"
-LABEL description="CMake 4.0.1 using Ubuntu 24.04 base image"
+LABEL description="CMake 4.0.1 using Ubuntu 25.04 base image"
 LABEL license="MIT license"
 
 # Cf. https://github.com/Kitware/CMake/releases
