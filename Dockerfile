@@ -9,6 +9,7 @@ LABEL license="MIT license"
 
 # Cf. https://github.com/Kitware/CMake/releases
 ARG CMAKE_VERSION=4.0.1
+ARG DEBIAN_FRONTEND=noninteractive
 
 RUN \
   apt-get update && \
