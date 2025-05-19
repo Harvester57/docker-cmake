@@ -2,13 +2,13 @@
 FROM ubuntu:plucky-20250415@sha256:79efa276fdefa2ee3911db29b0608f8c0561c347ec3f4d4139980d43b168d991
 
 LABEL maintainer="florian.stosse@gmail.com"
-LABEL lastupdate="2025-04-27"
+LABEL lastupdate="2025-05-19"
 LABEL author="Florian Stosse"
-LABEL description="CMake 4.0.1 using Ubuntu 25.04 base image"
+LABEL description="CMake 4.0.2 using Ubuntu 25.04 base image"
 LABEL license="MIT license"
 
 # Cf. https://github.com/Kitware/CMake/releases
-ARG CMAKE_VERSION=4.0.1
+ARG CMAKE_VERSION=4.0.2
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN \
