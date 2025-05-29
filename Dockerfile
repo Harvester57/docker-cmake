@@ -4,7 +4,7 @@ FROM debian:sid-slim@sha256:ce77de9639fc8f48decaa4d94fa5ed1a78e5b7356822f105d18d
 LABEL maintainer="florian.stosse@gmail.com"
 LABEL lastupdate="2025-05-29"
 LABEL author="Florian Stosse"
-LABEL description="CMake 4.0.2 using Debian Stable slim base image"
+LABEL description="CMake 4.0.2 using Debian Sid slim base image"
 LABEL license="MIT license"
 
 # Cf. https://github.com/Kitware/CMake/releases
