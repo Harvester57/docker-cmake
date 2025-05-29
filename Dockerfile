@@ -1,10 +1,10 @@
 # Source: https://hub.docker.com/_/ubuntu
-FROM ubuntu:plucky-20250415@sha256:79efa276fdefa2ee3911db29b0608f8c0561c347ec3f4d4139980d43b168d991
+FROM debian:stable-slim@sha256:b3ef39b8a45ee3b689c462dfa711454bcfc9c9965fe81c6cfb7ff4029b5b8cd7
 
 LABEL maintainer="florian.stosse@gmail.com"
-LABEL lastupdate="2025-05-19"
+LABEL lastupdate="2025-05-29"
 LABEL author="Florian Stosse"
-LABEL description="CMake 4.0.2 using Ubuntu 25.04 base image"
+LABEL description="CMake 4.0.2 using Debian Stable slim base image"
 LABEL license="MIT license"
 
 # Cf. https://github.com/Kitware/CMake/releases
