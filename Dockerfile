@@ -2,7 +2,7 @@
 FROM debian:sid-slim@sha256:56a871410d2e43c88b8014fd9800864723f07a557bd0e7d66438c02d4cf05199
 
 LABEL maintainer="florian.stosse@gmail.com"
-LABEL lastupdate="2025-06-22"
+LABEL lastupdate="2025-06-29"
 LABEL author="Florian Stosse"
 LABEL description="CMake 4.0.3 using Debian Sid slim base image"
 LABEL license="MIT license"
