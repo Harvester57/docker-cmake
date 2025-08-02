@@ -12,10 +12,10 @@ ARG CMAKE_VERSION=4.1.0-rc4
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN \
-  apt-get update && \
-  apt-get install -y --no-install-recommends sudo build-essential make ca-certificates wget && \
+  apt update && \
+  apt install -y --no-install-recommends sudo build-essential make ca-certificates wget && \
   update-ca-certificates && \
-  apt-get dist-upgrade -y
+  apt full-upgrade -y
 
 RUN wget https://github.com/Kitware/CMake/releases/download/v${CMAKE_VERSION}/cmake-${CMAKE_VERSION}-linux-x86_64.sh \
   -q -O /tmp/cmake-install.sh && \
@@ -33,3 +33,4 @@ RUN groupadd -g 999 appuser && \
 USER appuser
 
 ENV PATH="/usr/bin/cmake/bin:${PATH}"
+
