@@ -33,5 +33,3 @@ RUN groupadd -g 999 appuser && \
 USER appuser
 
 ENV PATH="/usr/bin/cmake/bin:${PATH}"
-
-
