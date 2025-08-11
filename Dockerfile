@@ -2,13 +2,13 @@
 FROM debian:sid-slim@sha256:9e31e8e61bd314f9fca1849d98621ba370d0a7e59056b20b1739224f5c46a2ea
 
 LABEL maintainer="florian.stosse@gmail.com"
-LABEL lastupdate="2025-08-02"
+LABEL lastupdate="2025-08-11"
 LABEL author="Florian Stosse"
-LABEL description="CMake 4.1.0-rc4 using Debian Sid slim base image"
+LABEL description="CMake 4.1.0 using Debian Sid slim base image"
 LABEL license="MIT license"
 
 # Cf. https://github.com/Kitware/CMake/releases
-ARG CMAKE_VERSION=4.1.0-rc4
+ARG CMAKE_VERSION=4.1.0
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN \
@@ -33,4 +33,5 @@ RUN groupadd -g 999 appuser && \
 USER appuser
 
 ENV PATH="/usr/bin/cmake/bin:${PATH}"
+
 
