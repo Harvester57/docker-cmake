@@ -23,8 +23,3 @@ updates:
   - "Harvester57"
   schedule:
     interval: "weekly"
-  groups:
-    actions-dependencies:
-      applies-to: version-updates
-      patterns:
-      - "*"
