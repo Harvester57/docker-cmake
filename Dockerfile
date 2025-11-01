@@ -12,10 +12,10 @@ ARG CMAKE_VERSION=4.1.2
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN \
-  apt update && \
-  apt install -y --no-install-recommends sudo build-essential make ca-certificates wget && \
+  apt-get update && \
+  apt-get install -y --no-install-recommends sudo build-essential make ca-certificates wget && \
   update-ca-certificates && \
-  apt full-upgrade -y
+  apt-get full-upgrade -y
 
 RUN wget https://github.com/Kitware/CMake/releases/download/v${CMAKE_VERSION}/cmake-${CMAKE_VERSION}-linux-x86_64.sh \
   -q -O /tmp/cmake-install.sh && \
