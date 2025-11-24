@@ -1,5 +1,5 @@
 # Source: https://hub.docker.com/_/ubuntu
-FROM debian:sid-slim@sha256:c37d0f11153ea67d18364ab8ca7ee544615e031651502853314c9d43be3614a9
+FROM debian:sid-slim@sha256:7a2a8c67e744e32162c8d918c6ca59dfb5809f3984857bd451693eab72fc1050
 
 LABEL maintainer="florian.stosse@gmail.com"
 LABEL lastupdate="2025-10-06"
