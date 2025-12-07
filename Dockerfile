@@ -1,14 +1,14 @@
 # Source: https://hub.docker.com/_/ubuntu
-FROM debian:sid-slim@sha256:7a2a8c67e744e32162c8d918c6ca59dfb5809f3984857bd451693eab72fc1050
+FROM debian:unstable-slim@sha256:5ee6733c2db5bfe27184aaf83db7611fca0652706fd93704422b1a890ae2db73
 
 LABEL maintainer="florian.stosse@gmail.com"
-LABEL lastupdate="2025-10-06"
+LABEL lastupdate="2025-12-07"
 LABEL author="Florian Stosse"
-LABEL description="CMake 4.1.2 using Debian Sid slim base image"
+LABEL description="CMake 4.2.0 using Debian unstable-slim base image"
 LABEL license="MIT license"
 
 # Cf. https://github.com/Kitware/CMake/releases
-ARG CMAKE_VERSION=4.1.2
+ARG CMAKE_VERSION=4.2.0
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN \
@@ -33,4 +33,3 @@ RUN groupadd -g 999 appuser && \
 USER appuser
 
 ENV PATH="/usr/bin/cmake/bin:${PATH}"
-
