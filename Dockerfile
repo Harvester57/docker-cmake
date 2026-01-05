@@ -1,5 +1,5 @@
 # Source: https://hub.docker.com/_/ubuntu
-FROM debian:unstable-slim@sha256:5a5db7aad659b600d164ab43195999b9aee3b01c1bf44bdc0215bc843bc03e9a
+FROM debian:unstable-slim@sha256:2ebc8efe6fc8af3cc5488db4d40e3ebdcac25c4594cf288fc4cdedc3afea572e
 
 LABEL maintainer="florian.stosse@gmail.com"
 LABEL lastupdate="2025-12-15"
