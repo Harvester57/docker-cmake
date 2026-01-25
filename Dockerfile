@@ -2,13 +2,13 @@
 FROM debian:unstable-slim@sha256:6e0df66069a43d1ca6be0974382b7d61a356c23f537d643d01327a547aebab97
 
 LABEL maintainer="florian.stosse@gmail.com"
-LABEL lastupdate="2025-12-15"
+LABEL lastupdate="2026-01-25"
 LABEL author="Florian Stosse"
-LABEL description="CMake 4.2.1 using Debian unstable-slim base image"
+LABEL description="CMake 4.2.2 using Debian unstable-slim base image"
 LABEL license="MIT license"
 
 # Cf. https://github.com/Kitware/CMake/releases
-ARG CMAKE_VERSION=4.2.1
+ARG CMAKE_VERSION=4.2.2
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
@@ -32,3 +32,4 @@ RUN groupadd -g 999 appuser && \
 USER appuser
 
 ENV PATH="/usr/bin/cmake/bin:${PATH}"
+
