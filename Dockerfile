@@ -1,10 +1,10 @@
-# Source: https://hub.docker.com/_/ubuntu
-FROM debian:unstable-slim@sha256:4c61786e70a77748ada64ceb49cef35a80d6721214a95a22a3e7452cfc8eb95f
+# https://hub.docker.com/hardened-images/catalog/dhi/debian-base
+FROM dhi.io/debian-base:trixie-debian13-dev@sha256:135e45aa54d93f6d065af66ad15e1b27e1263fb830f60ed792a9cc398af2b654
 
 LABEL maintainer="florian.stosse@gmail.com"
-LABEL lastupdate="2026-02-03"
+LABEL lastupdate="2026-02-27"
 LABEL author="Florian Stosse"
-LABEL description="CMake 4.2.3 using Debian unstable-slim base image"
+LABEL description="CMake 4.2.3 using Docker Hardened Image based on Debian 13"
 LABEL license="MIT license"
 
 # Cf. https://github.com/Kitware/CMake/releases
@@ -22,13 +22,7 @@ RUN wget https://github.com/Kitware/CMake/releases/download/v${CMAKE_VERSION}/cm
     mkdir /usr/bin/cmake && \
     /tmp/cmake-install.sh --skip-license --prefix=/usr/bin/cmake && \
     rm /tmp/cmake-install.sh
-  
-RUN groupadd -g 999 appuser && \
-    mkdir -p /home/appuser && \
-    useradd -r -d /home/appuser -u 999 -g appuser appuser && \
-    chown -R appuser:appuser /home/appuser && \
-    usermod -aG sudo appuser && \
-    echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
-USER appuser
 
 ENV PATH="/usr/bin/cmake/bin:${PATH}"
+
+USER nonroot
