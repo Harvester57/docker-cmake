@@ -5,8 +5,8 @@ registries:
     type: "docker-registry"
     url: "dhi.io"
     replaces-base: true
-    username: ${{ secrets.DOCKER_USERNAME }}
-    password: ${{ secrets.DOCKER_TOKEN }}
+    username: ${{ secrets.DOCKERHUB_USERNAME }}
+    password: ${{ secrets.DOCKERHUB_TOKEN }}
 
 updates:
 - package-ecosystem: "docker"
