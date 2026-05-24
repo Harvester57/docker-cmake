@@ -2,13 +2,13 @@
 FROM dhi.io/debian-base:trixie-debian13-dev@sha256:5bb0ee6e4e9bb086854e7d38449c2c2667bd57e6abb0ae3b3f3d2664009cf0da
 
 LABEL maintainer="florian.stosse@gmail.com"
-LABEL lastupdate="2026-02-27"
+LABEL lastupdate="2026-05-24"
 LABEL author="Florian Stosse"
-LABEL description="CMake 4.3.2 using Docker Hardened Image based on Debian 13"
+LABEL description="CMake 4.3.3 using Docker Hardened Image based on Debian 13"
 LABEL license="MIT license"
 
 # Cf. https://github.com/Kitware/CMake/releases
-ARG CMAKE_VERSION=4.3.2
+ARG CMAKE_VERSION=4.3.3
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
