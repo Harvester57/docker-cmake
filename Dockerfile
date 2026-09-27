@@ -1,5 +1,5 @@
 # https://hub.docker.com/hardened-images/catalog/dhi/debian-base
-FROM dhi.io/debian-base:trixie-debian13-dev@sha256:f3bd649e61fc5357c3b2f207a0b047961d5562f0dc9905b85adbf4fa19580292
+FROM dhi.io/debian-base:trixie-debian13-dev@sha256:f18a569e4ed47f382ef551fac547bddcaa050f74565dfe35ba73958810fb8525
 
 LABEL maintainer="florian.stosse@gmail.com"
 LABEL lastupdate="2026-08-30"
