@@ -1,14 +1,13 @@
 # https://hub.docker.com/hardened-images/catalog/dhi/debian-base
 FROM dhi.io/debian-base:trixie-debian13-dev@sha256:f18a569e4ed47f382ef551fac547bddcaa050f74565dfe35ba73958810fb8525
 
-LABEL maintainer="florian.stosse@gmail.com"
-LABEL lastupdate="2026-08-30"
-LABEL author="Florian Stosse"
-LABEL description="CMake 4.4.3 using Docker Hardened Image based on Debian 13"
-LABEL license="MIT license"
+LABEL org.opencontainers.image.authors="Florian Stosse <florian.stosse@gmail.com>"
+LABEL org.opencontainers.image.created="2026-10-04"
+LABEL org.opencontainers.image.description="CMake 4.4.4 using Docker Hardened Image based on Debian 13"
+LABEL org.opencontainers.image.licenses="MIT license"
 
 # Cf. https://github.com/Kitware/CMake/releases
-ARG CMAKE_VERSION=4.4.3
+ARG CMAKE_VERSION=4.4.4
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
